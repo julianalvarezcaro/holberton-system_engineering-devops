@@ -1,0 +1,1 @@
+In this project we'll be trying some scripts
