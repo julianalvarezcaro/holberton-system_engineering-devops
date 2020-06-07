@@ -1,0 +1,1 @@
+I'll be making some scripts about standard outputs and inputs
