@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# Stops the process of the previous task (4-to_infinity_and_beyond)
+
+pid=0
+pid=$(pgrep -f 4-to_infinity_and_beyond)
+if [ "$pid" != "0" ]; then
+    kill "$pid"
+fi
