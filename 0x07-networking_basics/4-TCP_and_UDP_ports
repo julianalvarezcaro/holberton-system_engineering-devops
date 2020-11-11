@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+#This scripts displays listing ports
+sudo netstat -lp
+
