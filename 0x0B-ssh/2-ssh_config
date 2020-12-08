@@ -1,0 +1,7 @@
+# config file
+# IdentityFile dictates which private key to use
+# PasswordAuthentication does not allow password to be used
+
+Host *
+    IdentityFile ~/.ssh/holberton
+    PasswordAuthentication no
