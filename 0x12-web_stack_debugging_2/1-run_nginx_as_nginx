@@ -1,7 +1,7 @@
 #!/bin/bash
 # Makes Nginx run with Nginx user
 
-kill $(netstat -lpn | grep apache | awk -F ' ' '{print $7}' | cut -d '/' -f1)
+kill "$(netstat -lpn | grep apache | awk -F ' ' '{print $7}' | cut -d '/' -f1)"
 chown -R nginx /etc/nginx
 chmod u+r /etc/nginx/nginx.conf
 sed -i 's/80/8080/g' /etc/nginx/sites-available/default
