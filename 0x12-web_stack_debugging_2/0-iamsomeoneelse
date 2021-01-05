@@ -1,5 +1,5 @@
-#!/bin/bash
+#!/usr/bin/env bash
 # Runs whoami as another user
 
 chsh -s /bin/bash "$1"
-sudo -u "$1" -c whoami
+sudo -u "$1" whoami
