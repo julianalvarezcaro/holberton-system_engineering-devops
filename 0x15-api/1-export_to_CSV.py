@@ -16,7 +16,7 @@ if __name__ == "__main__":
     json_r_todos = resp_todos.json()
     json_r_user = resp_user.json()
 
-    user_name = json_r_user.get("name")
+    user_name = json_r_user.get("username")
 
     csv_fname = user_id + ".csv"
 
