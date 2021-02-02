@@ -12,7 +12,6 @@ if __name__ == "__main__":
     resp_user = requests.get(url_user)
     json_r_user = resp_user.json()
 
-    val_l = []
     big_dic = {}
 
     for user in json_r_user:
@@ -23,6 +22,7 @@ if __name__ == "__main__":
 
         user_name = user.get("username")
 
+        val_l = []
         for task in json_r_todos:
             del task["userId"]
             del task["id"]
