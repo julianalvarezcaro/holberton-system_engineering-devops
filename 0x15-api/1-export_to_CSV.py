@@ -5,6 +5,7 @@
 import requests
 from sys import argv
 import csv
+import json
 
 if __name__ == "__main__":
     user_id = argv[1]
@@ -19,11 +20,14 @@ if __name__ == "__main__":
     user_name = json_r_user.get("name")
 
     csv_fname = user_id + ".csv"
-    fd_csv = open(csv_fname, 'w+')
+    
+    with open(csv_fname, 'w+') as fd_csv:
 
-    # Object used to write in CSV format
-    csv_writer = csv.writer(fd_csv)
+        # Object used to write in CSV format
+        csv_writer = csv.writer(fd_csv, quoting=csv.QUOTE_ALL)
 
-    for task in json_r_todos:
-        csv_writer.writerow([user_id,
-                            user_name, task['completed'], task['title']])
+        data = json.loads(resp_todos.text)
+        for task in data:
+            csv_writer.writerow([user_id,
+                                user_name,
+                                task['completed'], task['title']])
