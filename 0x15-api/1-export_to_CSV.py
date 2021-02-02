@@ -1,4 +1,6 @@
 #!/usr/bin/python3
+"""Exports data in the CSV format.
+"""
 
 import requests
 from sys import argv
