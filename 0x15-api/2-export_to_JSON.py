@@ -29,5 +29,4 @@ if __name__ == "__main__":
     dic = {str(user_id): val_l}
 
     with open(json_fname, 'w+') as fd_json:
-        data = json.dumps(dic)
-        fd_json.write(data)
+        json.dump(dic, fd_json)
