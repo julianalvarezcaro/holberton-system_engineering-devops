@@ -1,7 +1,11 @@
 #!/usr/bin/python3
+"""For a given employee ID, returns information about the TODO list progress.
+"""
+
 
 import requests
 from sys import argv
+
 
 if __name__ == "__main__":
     user_id = argv[1]
@@ -13,7 +17,6 @@ if __name__ == "__main__":
     json_r_todos = resp_todos.json()
     json_r_user = resp_user.json()
 
-    completed_tasks = 0
     user_name = json_r_user.get("name")
 
     total_tasks = len(json_r_todos)
