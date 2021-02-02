@@ -25,6 +25,8 @@ if __name__ == "__main__":
     for task in json_r_todos:
         del task["userId"]
         del task["id"]
+        task["task"] = task.pop("title")
+        task["username"] = user_name
         val_l.append(task)
     dic = {str(user_id): val_l}
 
