@@ -1,4 +1,6 @@
 #!/usr/bin/python3
+"""Function that makes a request to check the number of subs of a subreaddit
+"""
 
 import requests
 
