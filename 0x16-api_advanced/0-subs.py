@@ -6,6 +6,8 @@ import requests
 
 
 def number_of_subscribers(subreddit):
+    """Makes request and returns the number of subs
+    """
     # Definition of User-Agent header
     usr = 'Opera/9.80 (X11; Linux i686; U; ru) Presto/2.8.131 Version/11.11'
     usrAg = {'User-Agent': usr}
