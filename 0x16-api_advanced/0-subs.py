@@ -18,6 +18,6 @@ def number_of_subscribers(subreddit):
     response = requests.get(url, headers=usrAg)
     json_r = response.json()
 
-    if json_r['kind'] != "t5":
+    if response.status_code == 404:
         return 0
     return json_r['data']['subscribers']
